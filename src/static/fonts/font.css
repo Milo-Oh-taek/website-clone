@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'SUIT-Bold';
+  src: url('./SUIT-Bold.ttf');
+}
+@font-face {
+  font-family: 'SUIT-ExtraBold';
+  src: url('./SUIT-ExtraBold.ttf');
+}
+@font-face {
+  font-family: 'SUIT-ExtraLight';
+  src: url('./SUIT-ExtraLight.ttf');
+}
+@font-face {
+  font-family: 'SUIT-Heavy';
+  src: url('./SUIT-Heavy.ttf');
+}
+@font-face {
+  font-family: 'SUIT-Light';
+  src: url('./SUIT-Light.ttf');
+}
+@font-face {
+  font-family: 'SUIT-Medium';
+  src: url('./SUIT-Medium.ttf');
+}
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('./SUIT-Regular.ttf');
+}
+@font-face {
+  font-family: 'SUIT-SemiBold';
+  src: url('./SUIT-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'SUIT-Thin';
+  src: url('./SUIT-Thin.ttf');
+}
+@font-face {
+  font-family: 'Spoqa-Han-Sans-Neo-Bold';
+  src: url('./SpoqaHanSansNeo-Bold.ttf');
+}
+@font-face {
+  font-family: 'Pretendard-SemiBold';
+  src: url('./Pretendard-SemiBold.ttf');
+}
