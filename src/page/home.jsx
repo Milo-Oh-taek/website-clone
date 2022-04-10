@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 import styled from 'styled-components';
 
@@ -118,6 +118,9 @@ const IframeAreaWrapper = styled.div`
 `;
 
 const Home = () => {
+  useEffect(() => {
+    alert('Under construction! This is a Test Website');
+  }, []);
   return (
     <>
       <Wrapper>
