@@ -72,9 +72,9 @@ const Row = styled.div`
     }
   }
   @media screen and (max-width: 420px) {
-    width: 90%;
+    width: 95%;
     img {
-      height: 10px;
+      height: 9px;
     }
   }
 `;
