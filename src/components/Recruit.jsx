@@ -23,7 +23,7 @@ const Wrapper = styled.div`
     width: 95vw;
   }
   @media screen and (max-width: 500px) {
-    margin: 150px auto;
+    margin: 100px auto;
     width: 90vw;
   }
 `;
@@ -53,7 +53,7 @@ const JobTitleH2 = styled.h3`
   font-family: Spoqa-Han-Sans-Neo-Bold;
   margin: 0;
   @media screen and (max-width: 500px) {
-    font-size: 22px;
+    font-size: 20px;
   }
 `;
 
@@ -72,6 +72,7 @@ const ArticleItem = styled.div`
     font-size: 18px;
     margin: 35px 10px;
     p {
+      font-size: 18px;
       line-height: 1.8rem;
     }
   }
@@ -81,6 +82,7 @@ const ArticleItemH2 = styled.h4`
   font-family: SUIT-Bold;
   @media screen and (max-width: 500px) {
     margin-bottom: 0.5rem;
+    font-size: 18px;
   }
 `;
 const ApplyAreaDiv = styled.div`
@@ -104,7 +106,7 @@ const RecruitH1 = styled.h1`
   margin-bottom: 50px;
   font-family: Pretendard-SemiBold;
   @media screen and (max-width: 500px) {
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 30px;
   }
 `;
@@ -178,6 +180,7 @@ const Recruit = () => {
             <a
               href="https://www.notion.so/994ec0493d0a4c9284529ee6fe932b79"
               target="_blank"
+              rel="noreferrer"
             >
               <SeeMore>지원하기</SeeMore>
             </a>
@@ -224,6 +227,7 @@ const Recruit = () => {
             <a
               href="https://www.notion.so/994ec0493d0a4c9284529ee6fe932b79"
               target="_blank"
+              rel="noreferrer"
             >
               <SeeMore>지원하기</SeeMore>
             </a>

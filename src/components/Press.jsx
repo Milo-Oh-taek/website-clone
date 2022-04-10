@@ -4,14 +4,19 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { SeeMore } from '../page/home';
 
 const Wrapper = styled.section`
-    background-color: rgb(245, 248, 250);
-    max-width: 100%;
-    margin-top: 2vh;
-    height: auto;
-    padding 1rem 0 200px 0;
-    @media screen and (max-width: 420px) {
-      padding-bottom: 120px;
-    }
+  background-color: rgb(245, 248, 250);
+  max-width: 100%;
+  margin-top: 0px;
+  height: auto;
+  padding: 2rem 0 200px 0;
+  @media screen and (max-width: 770px) {
+    padding-bottom: 120px;
+    padding-top: 1rem;
+  }
+  @media screen and (max-width: 420px) {
+    padding-bottom: 120px;
+    padding-top: 0px;
+  }
 `;
 
 const ContentContainer = styled(Container)`
@@ -181,7 +186,11 @@ const Press = () => {
       <ArticleWrapper className="home_megazine">
         <ArticleUl>
           <ArticleLi>
-            <a href="https://futurechosun.com/archives/56258" target="_blank">
+            <a
+              href="https://futurechosun.com/archives/56258"
+              target="_blank"
+              rel="noreferrer"
+            >
               <PressnameArea>
                 조선일보 더나은미래
                 <img height="17px" src="/home/arrow_forward.svg" alt="icon" />
@@ -197,6 +206,7 @@ const Press = () => {
             <a
               href="https://www.joongang.co.kr/article/25004739#home"
               target="_blank"
+              rel="noreferrer"
             >
               <PressnameArea>
                 중앙일보
@@ -216,6 +226,7 @@ const Press = () => {
             <a
               href="https://www.yna.co.kr/view/AKR20211119150100017?section=industry/technology-science"
               target="_blank"
+              rel="noreferrer"
             >
               <PressnameArea>
                 연합뉴스
@@ -233,6 +244,7 @@ const Press = () => {
             <a
               href="https://news.mt.co.kr/mtview.php?no=2021080615324868175"
               target="_blank"
+              rel="noreferrer"
             >
               <PressnameArea>
                 머니투데이
@@ -250,6 +262,7 @@ const Press = () => {
             <a
               href="http://www.electimes.com/news/articleView.html?idxno=221745"
               target="_blank"
+              rel="noreferrer"
             >
               <PressnameArea>
                 전기신문
@@ -267,6 +280,7 @@ const Press = () => {
             <a
               href="https://www.e2news.com/news/articleView.html?idxno=235448"
               target="_blank"
+              rel="noreferrer"
             >
               <PressnameArea>
                 이투뉴스
@@ -425,6 +439,7 @@ const Press = () => {
           target="_blank"
           href="https://blue-ocarina-b66.notion.site/7521f6afa92c418080a84bfd148b74ea"
           style={{ textDecorationLine: 'none' }}
+          rel="noreferrer"
         >
           <SeeMore>더보기</SeeMore>
         </a>

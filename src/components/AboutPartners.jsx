@@ -4,8 +4,28 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   width: 100%;
   height: 650px;
-  padding-top: 150px;
+  margin-top: 150px;
   margin-bottom: 200px;
+  h5 {
+    margin-top: 20px;
+  }
+  @media screen and (max-width: 1280px) {
+    margin-bottom: 100px;
+  }
+  @media screen and (max-width: 1080px) {
+    margin-top: 250px;
+  }
+  @media screen and (max-width: 770px) {
+    margin-top: 350px;
+    margin-bottom: 0px;
+  }
+  @media screen and (max-width: 500px) {
+    height: 600px;
+    h5 {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+  }
 `;
 
 const ContentWrapper = styled.div`
@@ -82,7 +102,7 @@ const AboutPartners = () => {
     <Wrapper id="partnersection">
       <div>
         <h1 style={{ fontFamily: 'SUIT-SemiBold' }}>함께하는 기업들</h1>
-        <h5 style={{ margin: '1.5rem 0 4rem' }}>2021년 9월 28일 기준</h5>
+        <h5>2021년 9월 28일 기준</h5>
         <ContentWrapper>
           <Row>
             <RowTitle>엑셀러레이팅</RowTitle>

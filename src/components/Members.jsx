@@ -35,6 +35,7 @@ const Wrapper = styled.div`
     width: 70%;
   }
   @media screen and (max-width: 770px) {
+    padding-top: 150px;
     .br {
       display: block;
     }

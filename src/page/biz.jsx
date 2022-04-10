@@ -75,6 +75,7 @@ const LinkEffect = styled.div`
     }
   }
   @media screen and (max-width: 375px) {
+    margin-top: 15px;
     font-size: 13px;
     img {
       height: 15px;
@@ -172,7 +173,7 @@ const ArticleTitle = styled.div`
     }
     h1 {
       font-size: 30px;
-      line-height: 50px;
+      line-height: 30px;
     }
   }
   @media screen and (max-width: 650px) {
@@ -187,9 +188,10 @@ const ArticleTitle = styled.div`
       height: 30px;
     }
     h1 {
+      margin-top: 8px;
+      margin-bottom: 15px;
       font-size: 20px;
       line-height: 20px;
-      margin-bottom: 0;
     }
   }
   @media screen and (max-width: 375px) {
@@ -198,8 +200,8 @@ const ArticleTitle = styled.div`
     }
     h1 {
       font-size: 17px;
-      margin-top: 0;
-      margin-bottom: 5px;
+      margin-top: 5px;
+      margin-bottom: 8px;
       line-height: 22px;
     }
   }
@@ -384,7 +386,11 @@ const Biz = () => {
               공공데이터 활용 우수사례로 대통령상을 수상하였습니다.
             </SunmapH2>
             <LinkArea>
-              <a href="https://map.60hz.io/index.html" target="_blank">
+              <a
+                href="https://map.60hz.io/index.html"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <LinkEffect>
                   <span>햇빛바람지도 바로가기</span>
                   <img src="/biz/arrow_forward.svg" />
@@ -425,6 +431,7 @@ const Biz = () => {
                   fontSize: '25px',
                   marginTop: '30px',
                 }}
+                rel="noreferrer"
               >
                 <LinkEffect>
                   <span>솔루션 문의하기</span>

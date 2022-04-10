@@ -40,18 +40,18 @@ const Main = styled.main`
   );
   display: inline-block;
   width: 100%;
-  height: 1000px;
+  height: 850px;
   margin: 0;
   padding: 250px 0 0 0;
   @media screen and (max-width: 770px) {
-    height: 850px;
+    height: 600px;
     padding-top: 150px;
   }
   @media screen and (max-width: 500px) {
-    height: 710px;
+    height: 600px;
   }
   @media screen and (max-width: 420px) {
-    height: 585px;
+    height: 520px;
     padding-top: 125px;
   }
 `;
@@ -114,6 +114,7 @@ const IframeAreaWrapper = styled.div`
     border: 15px solid rgb(255, 255, 255);
     border-radius: 15px;
     box-shadow: rgb(0, 0, 0 / 13%) 10px 10px 20px;
+    margin-top: 60px;
   }
 `;
 

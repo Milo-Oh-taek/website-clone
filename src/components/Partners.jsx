@@ -14,7 +14,7 @@ export const bounce = keyframes`
 const Wrapper = styled.section`
   width: 100%;
   max-width: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
   // margin: 0 auto;
   // clear: both;
   // height: auto;

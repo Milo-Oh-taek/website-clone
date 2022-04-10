@@ -16,17 +16,19 @@ const settings = {
 };
 
 const Wrapper = styled.div`
-  padding-top: 5vh;
+  padding: 90px 0 120px 0;
   // max-width: 1190px;
   // margin: 30px auto;
   height: 110px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   @media screen and (max-width: 770px) {
-    padding-top: 3vh;
+    height: 130px;
+    padding-top: 60px;
+    margin: 30px;
   }
   @media screen and (max-width: 550px) {
     height: 140px;
-    martin-top: 40px !important;
+    margin: 5px;
   }
 `;
 

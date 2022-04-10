@@ -26,6 +26,8 @@ const LinkEffect = styled.a`
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
+  height: 700px;
+  background-color: white;
   .number {
     border-bottom: 1px solid #000;
     font-family: SUIT-Regular;
@@ -35,25 +37,26 @@ const Wrapper = styled.div`
   .text {
     margin-top: 22px;
   }
-  //   a {
-  //     text-decoration: none;
-  //     color: rgb(236, 91, 68);
-  //     font-size: 20px;
-  //   }
   h6 {
     font-size: 20px;
     line-height: 20px;
+  }
+  @media screen and (max-width: 935px) {
+    height: 860px;
+  }
+  @media screen and (max-width: 580px) {
+    height: 620px;
   }
 `;
 
 const PlanUl = styled.ul`
   list-style: none;
-  padding: 130px 175px 90px;
+  padding: 130px 180px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 60px 30px;
+  /* grid-gap: 60px 30px; */
   margin: 0;
-  gap: 60px 30px;
+  gap: 40px 30px;
   width: 1440px;
   background-color: white;
   justify-items: center;
@@ -77,18 +80,20 @@ const PlanUl = styled.ul`
     width: 550px;
   }
   @media screen and (max-width: 580px) {
-    gap: 20px 30px;
+    gap: 5px 10px;
     width: 400px;
+    height: 600px;
     padding-bottom: 10px;
   }
 `;
 
 const PlanLi = styled.li`
   text-align: left;
-  width: 350px;
+  width: 340px;
   a {
     text-decoration: none;
     color: rgb(236, 91, 68);
+    line-height: 50px;
     font-size: 20px;
     &:hover {
       img {
@@ -108,22 +113,31 @@ const PlanLi = styled.li`
     }
   }
   @media screen and (max-width: 680px) {
-    width: 170px;
+    width: 190px;
+    h6 {
+      font-size: 18px;
+      line-height: 18px;
+    }
     .number {
       font-size: 25px;
     }
   }
   @media screen and (max-width: 580px) {
     width: 158px;
+    h6 {
+      font-size: 15px;
+      line-height: 15px;
+    }
     .number {
       font-size: 18px;
     }
   }
   @media screen and (max-width: 420px) {
     width: 130px;
+    height: 120px;
     h6 {
       font-size: 10px;
-      line-height: 15px;
+      line-height: 8px;
     }
     .text {
       margin-top: 10px;
@@ -162,32 +176,59 @@ const TitleLi = styled.li`
     }
   }
   @media screen and (max-width: 935px) {
+    width: 100%;
     grid-column: span 2;
+    h1 {
+      font-size: 40px;
+      line-height: 70px;
+    }
+    h6 {
+      font-size: 26px;
+    }
   }
   @media screen and (max-width: 680px) {
+    h1 {
+      font-size: 32px;
+    }
     h6 {
-      font-size: 15px;
+      font-size: 18px;
     }
   }
   @media screen and (max-width: 580px) {
     h1 {
       font-size: 30px;
+      line-height: 40px;
     }
     h6 {
-      font-size: 12px;
+      font-size: 16px;
+      line-height: 24px;
     }
   }
   @media screen and (max-width: 420px) {
-    h6 {
-      font-size: 10px;
-      line-height: 15px;
+    /* height: 60px; */
+    h1 {
+      font-size: 25px;
     }
+    h6 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+`;
+
+const PaddingDiv = styled.div`
+  width: 100%;
+  height: 50%;
+  background-color: #f5f8fa;
+  @media screen and (max-width: 935px) {
+    height: 20%;
   }
 `;
 
 const Plan = () => {
   return (
     <Wrapper>
+      <PaddingDiv />
       <PlanUl>
         <TitleLi>
           <h1 className="plan_title">MASTER PLAN</h1>
@@ -200,9 +241,14 @@ const Plan = () => {
         <PlanLi>
           <h1 className="number">1</h1>
           <h6 className="text">다양한 분산 전원을 연결시킨다.</h6>
-          <h6>(재생에너지 발전소, 전기자동차, 스마트가전 등)</h6>
+          <h6>(재생에너지 발전소, 전기자동차,</h6>
+          <h6>스마트가전 등)</h6>
           <div>
-            <a href="https://map.60hz.io/index.html" target="_blank">
+            <a
+              href="https://map.60hz.io/index.html"
+              target="_blank"
+              rel="noreferrer"
+            >
               햇빛바람지도 <img src="/about/arrow_forward_orange.svg" />
             </a>
           </div>
@@ -211,7 +257,7 @@ const Plan = () => {
           <h1 className="number">2</h1>
           <h6 className="text">연결된 자원들을 안전하고</h6>
           <h6>효율적으로 관리할 수 있게 한다.</h6>
-          <h6>(발전량 예측, 통합 관제 등</h6>
+          <h6>(발전량 예측, 통합 관제 등)</h6>
           <div>
             <Link to="/business#product">
               통합관제시스템
@@ -235,6 +281,7 @@ const Plan = () => {
           <h6 className="text">1~4를 해외에서 반복한다.</h6>
         </PlanLi>
       </PlanUl>
+      <PaddingDiv />
     </Wrapper>
   );
 };

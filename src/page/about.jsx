@@ -23,6 +23,7 @@ const Main = styled.main`
     @media screen and (max-width: 1280px) {
       font-size: 37px;
     }
+
     @media screen and (max-width: 770px) {
       line-height: 50px;
       margin-bottom: 20px;
@@ -51,6 +52,7 @@ const Main = styled.main`
   .about_br {
     display: none;
   }
+
   @media screen and (max-width: 770px) {
     padding-top: 150px;
     .about_br {

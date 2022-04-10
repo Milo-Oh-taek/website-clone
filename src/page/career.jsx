@@ -89,17 +89,20 @@ const WorkContentWrapper = styled.div`
   gap: 143px;
   justify-content: center;
   flex-wrap: wrap;
-  h1{
+  h1 {
     font-family: SUIT-SemiBold;
-     font-size: 27px;
+    font-size: 27px;
+  }
+  img {
+    height: 60px;
   }
   @media screen and (max-width: 1300px) {
     gap: 80px;
     h1 {
       font-size: 23px;
     }
-    img{
-      height:40px;
+    img {
+      height: 40px;
     }
     li {
       font-size: 20px;
@@ -111,18 +114,18 @@ const WorkContentWrapper = styled.div`
       font-size: 23px;
     }
 
-    img{
-      height:40px;
+    img {
+      height: 40px;
     }
     li {
       font-size: 20px;
     }
   }
   @media screen and (max-width: 965px) {
-      width: 90vw;
-      display: flex;
-      justify-content: start;
-      padding-left: 10%;
+    width: 90vw;
+    display: flex;
+    justify-content: start;
+    padding-left: 10%;
     h1 {
       font-size: 30px;
       line-height: 50px;
@@ -147,6 +150,7 @@ const WorkContentWrapper = styled.div`
       font-size: 18px;
       line-height: 30px;
     }
+  }
 `;
 
 const WorkContentUl = styled.ul`
@@ -158,6 +162,11 @@ const WorkContentUl = styled.ul`
   padding: 0;
   @media screen and (max-width: 500px) {
     margin-top: 0;
+    li {
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
 `;
 
 const Career = () => {
