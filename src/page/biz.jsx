@@ -17,7 +17,6 @@ const moveSlideShow = keyframes`
 `;
 
 const MonitoringDiv = styled.div`
-  // height: 950px;
   padding: 200px 0;
   background-color: #f5f8fa;
   display: flex;
@@ -32,15 +31,11 @@ const MonitoringDiv = styled.div`
   @media screen and (max-width: 1550px) {
     align-items: center;
     flex-direction: column-reverse;
+    padding: 150px 0;
+  }
+  @media screen and (max-width: 375px) {
     padding: 100px 0;
   }
-  // @media screen and (max-width: 500px) {
-  //   padding: 50px 0;
-  // }
-  // @media screen and (max-width: 375px) {
-  //   width: 300px;
-  //   height: 165px;
-  // }
 `;
 
 const LinkEffect = styled.div`
@@ -96,7 +91,7 @@ const SunmapBox = styled.div`
     padding-bottom: 100px;
   }
   @media screen and (max-width: 500px) {
-    padding-bottom: 50px;
+    padding-bottom: 100px;
   }
 `;
 
@@ -107,24 +102,16 @@ const YoutubeBox = styled.aside`
   height: 450px;
   overflow: hidden;
   padding: 25px;
-  // width: 85%;
-  // max-width: 50%;
-  // display: inline-block;
-  // border: 40px solid rgb(255, 255, 255);
 
   @media screen and (max-width: 900px) {
     width: 550px;
     height: 310px;
   }
   @media screen and (max-width: 650px) {
-    // max-width: 90%;
-    // border: 30px;
-    // padding: 20px;
     width: 400px;
     height: 225px;
   }
   @media screen and (max-width: 420px) {
-    // max-width: 95%;
     width: 340px;
     height: 190px;
     border-radius: 15px;
@@ -287,6 +274,9 @@ const LinkArea = styled.div`
   a {
     text-decoration: none;
   }
+  @media screen and (max-width: 1550px) {
+    margin-top: 0px;
+  }
   @media screen and (max-width: 900px) {
     margin-top: 20px;
   }
@@ -342,7 +332,6 @@ const MonitoringImgArea = styled.div`
   align-items: center;
   background-color: white;
   @media screen and (max-width: 900px) {
-    // padding: 25px 0;
     width: 600px;
   }
   @media screen and (max-width: 650px) {

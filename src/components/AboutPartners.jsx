@@ -15,9 +15,10 @@ const Wrapper = styled.div`
     margin-top: 20px;
   }
   @media screen and (max-width: 1280px) {
-    margin-bottom: 100px;
+    margin: 50px 0 100px 0;
     .subtitle {
       font-size: 20px;
+      margin-top: 0px;
     }
   }
   @media screen and (max-width: 1080px) {
@@ -45,6 +46,9 @@ const Wrapper = styled.div`
   }
   @media screen and (max-width: 370px) {
     height: 600px;
+    .subtitle {
+      margin: 0;
+    }
   }
 `;
 
@@ -61,12 +65,12 @@ const Row = styled.div`
   width: 1250px;
   height: 95px;
   display: flex;
-  // justify-content: space-between;
   align-items: center;
   img {
-    // margin-right: 25px;
-    // width: 100%;
     height: 90px;
+  }
+  div {
+    margin-right: 3%;
   }
   @media screen and (max-width: 1280px) {
     display: grid;
@@ -90,12 +94,6 @@ const Row = styled.div`
       height: 50px;
     }
   }
-  // @media screen and (max-width: 550px) {
-  //   width: 95%;
-  //   img {
-  //     height: 55px;
-  //   }
-  // }
   @media screen and (max-width: 500px) {
     width: 100%;
     img {
@@ -115,58 +113,17 @@ const RowTitle = styled.div`
   display: inline-block;
   width: 200px;
   font-family: SUIT-Bold;
-  font-size: 20px;
+  font-size: 22px;
   @media screen and (max-width: 1280px) {
+    font-size: 20px;
     bottom: 0;
     text-align: center;
   }
   @media screen and (max-width: 770px) {
-    font-size: 15px;
+    font-size: 18px;
   }
-  @media screen and (max-width: 420px) {
-    font-size: 13px;
-    width: 140px;
-  }
-`;
-
-const Col = styled.div`
-  height: 95px;
-  display: flex;
-  justify-content: center;
-  img {
-    height: 25%;
-  }
-  @media screen and (max-width: 1280px) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center;
-    width: 740px;
-    img {
-      height: 18px;
-    }
-    div {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-  }
-  @media screen and (max-width: 770px) {
-    width: 630px;
-    img {
-      height: 12px;
-    }
-  }
-  @media screen and (max-width: 550px) {
-    width: 450px;
-    img {
-      height: 10px;
-    }
-  }
-  @media screen and (max-width: 420px) {
-    width: 95%;
-    img {
-      height: 9px;
-    }
+  @media screen and (max-width: 500px) {
+    font-size: 14px;
   }
 `;
 
@@ -180,55 +137,67 @@ const AboutPartners = () => {
           <Row>
             <RowTitle>엑셀러레이팅</RowTitle>
             <div>
-              <img src="/about/logo/sk_box.png"></img>
+              <img src="/about/logo/sk_box2.png" alt="sk_logo"></img>
             </div>
             <div>
-              <img src="/about/logo/lg_box.png"></img>
+              <img src="/about/logo/lg_box2.png" alt="lg_logo"></img>
             </div>
             <div>
-              <img src="/about/logo/온드림_box.png"></img>
+              <img src="/about/logo/온드림_box2.png" alt="온드림_logo"></img>
             </div>
             <div>
-              <img src="/about/logo/신한_box.png"></img>
+              <img src="/about/logo/신한_box2.png" alt="신한_logo"></img>
             </div>
             <div>
-              <img src="/about/logo/kwater_box.png"></img>
+              <img src="/about/logo/kwater_box.png" alt="kwater_logo"></img>
             </div>
           </Row>
           <Row>
             <RowTitle>투자사</RowTitle>
             <div>
-              <img src="/about/logo/소풍_box.png"></img>
+              <img src="/about/logo/소풍_box2.png" alt="소풍_logo"></img>
             </div>
             <div>
-              <img src="/about/logo/mysc_box.png"></img>
+              <img src="/about/logo/mysc_box2.png" alt="mysc_logo"></img>
             </div>
             <div>
-              <img src="/about/logo/제로원_box.png"></img>
+              <img src="/about/logo/제로원_box.png" alt="제로원_logo"></img>
             </div>
           </Row>
           <Row>
             <RowTitle>파트너</RowTitle>
             <div>
-              <img src="/about/logo/굿네이버스_box.png"></img>
+              <img
+                src="/about/logo/굿네이버스_box2.png"
+                alt="굿네이버스_logo"
+              ></img>
             </div>
             <div>
-              <img src="/about/logo/그리드위즈_box.png"></img>
+              <img
+                src="/about/logo/그리드위즈_box2.png"
+                alt="그리드위즈_logo"
+              ></img>
             </div>
             <div>
-              <img src="/about/logo/인업스_box.png"></img>
+              <img src="/about/logo/인업스_box2.png" alt="인업스_logo"></img>
             </div>
           </Row>
           <Row style={{ borderBottom: 'none' }}>
             <RowTitle>소셜 임팩트</RowTitle>
             <div>
-              <img src="/about/logo/임팩트_box.png"></img>
+              <img src="/about/logo/임팩트_box2.png" alt="임팩트_logo"></img>
             </div>
             <div>
-              <img src="/about/logo/소셜혁신연구소_box.png"></img>
+              <img
+                src="/about/logo/소셜혁신연구소_box2.png"
+                alt="소셜혁신연구소_logo"
+              ></img>
             </div>
             <div>
-              <img src="/about/logo/유쾌한반란_box.png"></img>
+              <img
+                src="/about/logo/유쾌한반란_box2.png"
+                alt="유쾌한반란_logo"
+              ></img>
             </div>
           </Row>
         </ContentWrapper>

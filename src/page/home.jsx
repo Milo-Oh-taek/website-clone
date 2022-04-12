@@ -20,15 +20,21 @@ const Main = styled.main`
   height: 850px;
   margin: 0;
   padding: 250px 0 0 0;
+  @media screen and (max-width: 1280px) {
+    height: 700px;
+  }
+  @media screen and (max-width: 965px) {
+    height: 600px;
+  }
   @media screen and (max-width: 770px) {
     height: 600px;
     padding-top: 150px;
   }
   @media screen and (max-width: 500px) {
-    height: 600px;
+    height: 500px;
   }
   @media screen and (max-width: 420px) {
-    height: 520px;
+    height: 420px;
   }
 `;
 
@@ -52,16 +58,6 @@ const Wrapper = styled.section`
 
 const Intro = styled.h1`
   padding-bottom: 20px;
-  // @media screen and (max-width: 1280px) {
-  //   font-size: 37px;
-  // }
-  // @media screen and (max-width: 770px) {
-  //   line-height: 50px;
-  // }
-  // @media screen and (max-width: 500px) {
-  //   font-size: 25px;
-  //   line-height: 40px;
-  // }
 `;
 
 const IframeAreaWrapper = styled.div`

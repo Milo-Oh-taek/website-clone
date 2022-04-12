@@ -8,8 +8,6 @@ const HeaderWrapper = styled.header`
   width: 100%;
   display: flex;
   align-items: center;
-  // margin: 0 110px 0 110px;
-  // padding: 0 110px 0;
   position: fixed;
   z-index: 100;
   justify-content: space-between;
@@ -57,11 +55,9 @@ const DivArea = styled.div`
     display: none;
   }
   @media screen and (max-width: 1100px) {
-    // padding: 0 30px;
     margin-left: 55px;
   }
   @media screen and (max-width: 770px) {
-    // padding: 0 20px;
     margin: 20px;
     justify-content: space-between;
     width: 100vw;
@@ -119,8 +115,6 @@ const ModalSection = styled.section`
 const ModalHeader = styled.div`
   width: 100%;
   height: 100px;
-  // padding: 0 20px;
-  // margin-right: 15px;
   display: flex;
   align-items: center;
   @media screen and (max-width: 420px) {

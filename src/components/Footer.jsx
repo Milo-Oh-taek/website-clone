@@ -89,7 +89,7 @@ const PageArea = styled.div`
   flex-direction: column;
   text-align: left;
   @media screen and (max-width: 770px) {
-    margin-right: 50px;
+    margin-right: 35px;
   }
 `;
 

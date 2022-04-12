@@ -6,7 +6,7 @@ import bounce from '../static/style/bounce';
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  height: 700px;
+  height: 720px;
   background-color: white;
   .number {
     border-bottom: 1px solid #000;
@@ -34,19 +34,16 @@ const PlanUl = styled.ul`
   padding: 130px 180px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* grid-gap: 60px 30px; */
   margin: 0;
   gap: 0px 30px;
   width: 1440px;
   background-color: white;
   justify-items: center;
   @media screen and (max-width: 1600px) {
-    // gap: 60px 30px;
     padding: 130px 100px 90px;
     width: 1300px;
   }
   @media screen and (max-width: 1280px) {
-    // gap: 45px 30px;
     padding: 130px 100px 90px;
     width: 1000px;
   }
@@ -90,6 +87,9 @@ const PlanLi = styled.li`
   img {
     height: 22px;
   }
+  .number {
+    margin: 0;
+  }
   @media screen and (max-width: 1280px) {
     width: 260px;
     div {
@@ -105,7 +105,6 @@ const PlanLi = styled.li`
     width: 200px;
     div {
       font-size: 16px;
-      // line-height: 18px;
     }
     .number {
       font-size: 25px;
@@ -115,7 +114,6 @@ const PlanLi = styled.li`
     width: 158px;
     div {
       font-size: 15px;
-      // line-height: 15px;
     }
     .number {
       font-size: 18px;
@@ -123,7 +121,6 @@ const PlanLi = styled.li`
   }
   @media screen and (max-width: 420px) {
     width: 130px;
-    // height: 120px;
     div {
       font-size: 12px;
     }
@@ -133,7 +130,6 @@ const PlanLi = styled.li`
     a {
       font-size: 10px;
       img {
-        // width: 15px;
         height: 12px;
       }
     }
@@ -145,9 +141,10 @@ const PlanLi = styled.li`
 
 const TitleLi = styled.li`
   text-align: left;
-  h1 {
+  .plan_title {
     font-family: SUIT-SemiBold;
     font-size: 45px;
+    margin: 8px 0 0 0;
   }
   div {
     font-size: 18px;
@@ -166,7 +163,7 @@ const TitleLi = styled.li`
   @media screen and (max-width: 935px) {
     width: 100%;
     grid-column: span 2;
-    h1 {
+    .plan_title {
       font-size: 40px;
       line-height: 70px;
     }
@@ -175,7 +172,7 @@ const TitleLi = styled.li`
     }
   }
   @media screen and (max-width: 680px) {
-    h1 {
+    .plan_title {
       font-size: 32px;
     }
     div {
@@ -183,7 +180,7 @@ const TitleLi = styled.li`
     }
   }
   @media screen and (max-width: 580px) {
-    h1 {
+    .plan_title {
       font-size: 30px;
       line-height: 40px;
     }
@@ -193,8 +190,7 @@ const TitleLi = styled.li`
     }
   }
   @media screen and (max-width: 420px) {
-    /* height: 60px; */
-    h1 {
+    .plan_title {
       font-size: 25px;
     }
     div {
@@ -227,7 +223,7 @@ const Plan = () => {
       <PaddingDiv />
       <PlanUl>
         <TitleLi>
-          <h1 className="plan_title">MASTER PLAN</h1>
+          <h1 className="plan_title title_font2">MASTER PLAN</h1>
           <div className="plan_subtitle">
             우리는 앞으로 10년간 다음과 같은 계획을
             <br />

@@ -1,6 +1,5 @@
 import React from 'react';
 import Recruit from '../components/Recruit';
-// import Recruit from '../components/Recruit2';
 import Together from '../components/Together';
 import styled from 'styled-components';
 
@@ -40,7 +39,6 @@ const MainWrapper = styled.main`
 `;
 
 const SectionWrapper = styled.section`
-  // height: 1209px;
   padding-top: 250px;
   background: linear-gradient(
     172.3deg,

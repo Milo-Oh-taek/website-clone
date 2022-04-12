@@ -91,7 +91,6 @@ const ArticleLi = styled.li`
     border-bottom: none;
     width: 40%;
     margin-right: 15px;
-    // height: 130px;
   }
 
   &:hover {
@@ -131,7 +130,6 @@ const PressContentP = styled.p`
 
 const TitleH4 = styled.h4`
   margin: 120px 0 70px;
-  // padding: 180px 0 60px;
   @media screen and (max-width: 770px) {
     font-size: 35px;
     margin: 100px 0 50px;

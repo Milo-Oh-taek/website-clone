@@ -65,9 +65,10 @@ const ArticleItem = styled.div`
   p {
     line-height: 0.8rem;
   }
-  @media screen and (max-width: 965px) {
+  @media screen and (max-width: 980px) {
+    margin: 0px;
     p {
-      line-height: 1.5rem;
+      line-height: 1.8rem;
     }
   }
   @media screen and (max-width: 500px) {

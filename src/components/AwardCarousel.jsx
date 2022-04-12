@@ -18,8 +18,6 @@ const settings = {
 
 const Wrapper = styled.div`
   padding: 80px 0 0 0;
-  // max-width: 1190px;
-  // margin-top: 30px auto;
   height: 110px;
   margin-top: 30px;
   @media screen and (max-width: 1280px) {
@@ -71,9 +69,6 @@ const Item = styled.div`
     @media screen and (max-width: 550px) {
       font-size: 16px;
     }
-    // @media screen and (max-width: 420px) {
-    //   font-size: 16px;
-    // }
   }
   @media screen and (max-width: 1280px) {
     img {
