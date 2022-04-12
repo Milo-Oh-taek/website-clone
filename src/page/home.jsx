@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import Slider from 'react-slick';
+import React from 'react';
 import styled from 'styled-components';
 
 import Together from '../components/Together';
@@ -7,29 +6,7 @@ import Together from '../components/Together';
 import Partners from '../components/Partners';
 import Press from '../components/Press';
 import AwardCarousel from '../components/AwardCarousel';
-
-export const SeeMore = styled.div`
-  border: 2px solid rgb(37, 37, 37);
-  font-family: SUIT-SemiBold;
-  border-radius: 80px;
-  color: rgb(37, 37, 37);
-  height: 90px;
-  display: table-cell;
-  vertical-align: middle;
-  font-size: 20px;
-  width: 180px;
-  height: 75px;
-  margin-top: 40px;
-  &:hover {
-    background: black;
-    color: white;
-  }
-  @media screen and (max-width: 770px) {
-    font-size: 15px;
-    height: 50px;
-    width: 130px;
-  }
-`;
+import SeeMore from '../static/style/seemore';
 
 const Main = styled.main`
   background: linear-gradient(
@@ -52,18 +29,6 @@ const Main = styled.main`
   }
   @media screen and (max-width: 420px) {
     height: 520px;
-    padding-top: 125px;
-  }
-`;
-
-const IntroMain = styled.div`
-  padding: 0 24px;
-  font-family: SUIT-SemiBold;
-  font-style: normal;
-  line-height: 65px;
-  font-size: 40px;
-  @media screen and (max-width: 1280px) {
-    font-size: 30px;
   }
 `;
 
@@ -72,6 +37,9 @@ const Wrapper = styled.section`
   display: block;
   margin: 0;
   padding: 0;
+  a {
+    text-decoration: none;
+  }
   .home_br {
     display: none;
   }
@@ -82,20 +50,18 @@ const Wrapper = styled.section`
   }
 `;
 
-const IntroP = styled.p`
-  font-family: SUIT-Bold;
-  line-height: 60px;
+const Intro = styled.h1`
   padding-bottom: 20px;
-  @media screen and (max-width: 1280px) {
-    font-size: 37px;
-  }
-  @media screen and (max-width: 770px) {
-    line-height: 50px;
-  }
-  @media screen and (max-width: 500px) {
-    font-size: 25px;
-    line-height: 40px;
-  }
+  // @media screen and (max-width: 1280px) {
+  //   font-size: 37px;
+  // }
+  // @media screen and (max-width: 770px) {
+  //   line-height: 50px;
+  // }
+  // @media screen and (max-width: 500px) {
+  //   font-size: 25px;
+  //   line-height: 40px;
+  // }
 `;
 
 const IframeAreaWrapper = styled.div`
@@ -118,57 +84,56 @@ const IframeAreaWrapper = styled.div`
   }
 `;
 
+const IframeDiv = styled.div`
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+`;
+
+const Iframe = styled.iframe`
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  maxwidth: 100%;
+  border-radius: 15px;
+`;
+
 const Home = () => {
-  useEffect(() => {
-    alert('Under construction! This is a Test Website');
-  }, []);
+  // useEffect(() => {
+  //   alert('Under construction! This is a Test Website');
+  // }, []);
   return (
     <>
       <Wrapper>
         <Main>
           <div>
-            <h1>
-              <IntroP>
-                식스티헤르츠는 <br className="home_br" />
-                재생에너지 발전량 예측 기술로 <br />
-                지구 기후위기에 대응하는 <br className="home_br" />
-                IT 소셜벤처입니다.
-              </IntroP>
-            </h1>
+            <Intro className="title_font1">
+              식스티헤르츠는 <br className="home_br" />
+              재생에너지 발전량 예측 기술로 <br />
+              지구 기후위기에 대응하는 <br className="home_br" />
+              IT 소셜벤처입니다.
+            </Intro>
           </div>
           <div>
-            <a href="/about" style={{ textDecorationLine: 'none' }}>
+            <a href="/about">
               <SeeMore>더 알아보기</SeeMore>
             </a>
           </div>
           <IframeAreaWrapper>
-            <div
-              style={{
-                position: 'relative',
-                paddingBottom: '56.25%',
-                height: '0',
-                overflow: 'hidden',
-                margin: '0',
-              }}
-            >
-              <iframe
+            <IframeDiv>
+              <Iframe
                 allowFullScreen
                 title="햇빛바람지도_미리보기"
                 src="https://www.youtube.com/embed/yGeiyZLHnlI?autoplay=1&mute=1&playlist=yGeiyZLHnlI&loop=1&modestbranding=1&controls=0"
-                style={{
-                  position: 'absolute',
-                  left: '0px',
-                  top: '0px',
-                  width: '100%',
-                  height: '100%',
-                  maxWidth: '100%',
-                  borderRadius: '15px',
-                }}
-              ></iframe>
-            </div>
+              />
+            </IframeDiv>
           </IframeAreaWrapper>
         </Main>
-        <AwardCarousel style={{ overflow: 'hidden', height: '120px' }} />
+        <AwardCarousel />
         <Press />
         <Partners />
       </Wrapper>

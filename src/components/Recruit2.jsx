@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { SeeMore } from '../page/home';
 
 import { Accordion } from 'react-bootstrap';
+import SeeMore from '../static/style/seemore';
 
 const JobTitle = styled(Accordion.Header)`
   border-top: 1px solid #c8c8c8;

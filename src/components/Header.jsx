@@ -3,39 +3,13 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
-const Wrapper = styled.div`
-  top: 0;
-  width: 100vw;
-  height: 110px;
-  display: flex;
-  .zero {
-    background: transparent;
-  }
-  .notzero {
-    background: white;
-    border-bottom: 1px solid #c3c1c1;
-  }
-
-  @media screen and (max-width: 770px) {
-    nav {
-      display: none;
-    }
-  }
-  @media screen and (max-width: 420px) {
-    height: 55px;
-  }
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  -webkit-transform: translate3d(0, 0, 0);
-`;
-
 const HeaderWrapper = styled.header`
-  height: 110px;
-  width: 100vw;
+  height: 100px;
+  width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 110px 0 110px;
-  // background: transparent;
+  // margin: 0 110px 0 110px;
+  // padding: 0 110px 0;
   position: fixed;
   z-index: 100;
   justify-content: space-between;
@@ -44,12 +18,11 @@ const HeaderWrapper = styled.header`
     padding: 0 10px 0 10px;
   }
   @media screen and (max-width: 770px) {
-    padding: 0 20px 0 20px;
+    padding: 0;
     nav {
       display: none;
     }
   }
-
   @media screen and (max-width: 420px) {
     height: 55px;
     padding: 0;
@@ -78,16 +51,21 @@ const DivArea = styled.div`
   width: 30%;
   display: flex;
   justify-content: start;
+  align-items: center;
+  margin-left: 110px;
   .menuImg {
     display: none;
   }
   @media screen and (max-width: 1100px) {
-    padding: 0 30px;
+    // padding: 0 30px;
+    margin-left: 55px;
   }
   @media screen and (max-width: 770px) {
-    padding: 0 20px;
+    // padding: 0 20px;
+    margin: 20px;
     justify-content: space-between;
     width: 100vw;
+
     .menuImg {
       display: block;
     }
@@ -106,8 +84,12 @@ const DivArea = styled.div`
 const NavArea = styled.nav`
   width: 70%;
   display: flex;
+  margin-right: 110px;
   justify-content: flex-end;
   font-size: 19px;
+  @media screen and (max-width: 1100px) {
+    margin-right: 55px;
+  }
 `;
 
 const ModalWrapper = styled.div`
@@ -134,6 +116,73 @@ const ModalSection = styled.section`
   }
 `;
 
+const ModalHeader = styled.div`
+  width: 100%;
+  height: 100px;
+  // padding: 0 20px;
+  // margin-right: 15px;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 420px) {
+    height: 55px;
+    padding: 0;
+  }
+`;
+
+const ModalHeaderContent = styled.div`
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    height: 27px;
+    width: 119.69px;
+  }
+  .close {
+    width: 34px;
+    height: 34px;
+  }
+
+  @media screen and (max-width: 420px) {
+    .logo {
+      width: 90px;
+    }
+    .close {
+      width: 27px;
+      height: 27px;
+    }
+  }
+`;
+
+const SunmapLink = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 170px;
+  align-items: center;
+  background-color: #ec5b44;
+  border-radius: 50px;
+  color: white;
+  font-size: 26px;
+  height: 50px;
+  @media screen and (max-width: 420px) {
+    font-size: 23px;
+    height: 40px;
+    width: 140px;
+  }
+`;
+
+const OtherLink = styled(Link)`
+  a {
+    text-decoration: none;
+  }
+  color: black;
+  @media screen and (max-width: 420px) {
+    font-size: 30px;
+    line-height: 60px;
+  }
+`;
+
 const Header = () => {
   const [scrollState, setScrollState] = useState('zero');
   const [openModal, setOpenModal] = useState(false);
@@ -150,26 +199,27 @@ const Header = () => {
     });
   });
 
-  useEffect(() => {
-    if (openModal) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-  }, [openModal]);
+  // useEffect(() => {
+  //   if (openModal) {
+  //     document.body.style.height = '100%';
+  //     document.body.style.overflow = 'hidden';
+  //   } else {
+  //     document.body.style.overflow = 'unset';
+  //   }
+  // }, [openModal]);
 
   return (
     <>
-      {/* <Wrapper> */}
       <HeaderWrapper className={scrollState}>
         <DivArea>
           <Link to="/">
-            <img src="/60hz.svg" height="27px" />
+            <img src="/60hz.svg" height="27px" alt="logo" />
           </Link>
           <img
             src="/menu.svg"
             className={openModal ? 'menuImg hide' : 'menuImg show'}
             style={{ cursor: 'pointer' }}
+            alt="menu_img"
             onClick={() => setOpenModal(true)}
           />
         </DivArea>
@@ -188,6 +238,7 @@ const Header = () => {
             <a
               target="_blank"
               href="https://map.60hz.io/index.html"
+              rel="noreferrer"
               style={{ textDecoration: 'none', color: 'white' }}
             >
               햇빛바람지도
@@ -220,30 +271,24 @@ const Header = () => {
           </LeftMarginMenu>
         </NavArea>
       </HeaderWrapper>
-      {/* </Wrapper> */}
       <ModalWrapper>
         <ModalSection
           className={openModal ? 'menu_modal show' : 'menu_modal hide'}
         >
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              height: '55px',
-              margin: '0 20px',
-            }}
-          >
-            <Link to="/" onClick={() => setOpenModal(false)}>
-              <img src="/60hz.svg" width="90px" height="27px" />
-            </Link>
-            <img
-              src="/close.svg"
-              height="27px"
-              style={{ cursor: 'pointer' }}
-              onClick={() => setOpenModal(false)}
-            />
-          </div>
+          <ModalHeader>
+            <ModalHeaderContent>
+              <Link to="/" onClick={() => setOpenModal(false)}>
+                <img src="/60hz.svg" alt="logo" className="logo" />
+              </Link>
+              <img
+                src="/close.svg"
+                className="close"
+                style={{ cursor: 'pointer' }}
+                alt="close_img"
+                onClick={() => setOpenModal(false)}
+              />
+            </ModalHeaderContent>
+          </ModalHeader>
           <ul
             style={{
               listStyle: 'none',
@@ -258,6 +303,7 @@ const Header = () => {
             <a
               href="https://map.60hz.io/index.html"
               target="_blank"
+              rel="noreferrer"
               style={{ textDecoration: 'none' }}
             >
               <li
@@ -268,44 +314,26 @@ const Header = () => {
                   alignItems: 'center',
                 }}
               >
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    width: '170px',
-                    alignItems: 'center',
-                    backgroundColor: '#ec5b44',
-                    borderRadius: '50px',
-                    color: 'white',
-                    fontSize: '26px',
-                    height: '50px',
-                  }}
-                >
-                  햇빛바람지도
-                </div>
+                <SunmapLink>햇빛바람지도</SunmapLink>
               </li>
             </a>
-            <Link
+            <OtherLink
               to="about"
-              style={{ textDecoration: 'none', color: 'black' }}
               onClick={() => setOpenModal(false)}
+              style={{ textDecoration: 'none' }}
             >
               <li style={{ paddingLeft: '20px' }}>ABOUT</li>
-            </Link>
-            <Link
-              to="business"
-              style={{ textDecoration: 'none', color: 'black' }}
-              onClick={() => setOpenModal(false)}
-            >
+            </OtherLink>
+            <OtherLink to="business" onClick={() => setOpenModal(false)}>
               <li style={{ paddingLeft: '20px' }}>BUSINESS</li>
-            </Link>
-            <Link
+            </OtherLink>
+            <OtherLink
               to="career"
-              style={{ textDecoration: 'none', color: '#ec5b44' }}
+              style={{ color: '#ec5b44' }}
               onClick={() => setOpenModal(false)}
             >
               <li style={{ paddingLeft: '20px' }}>CAREER</li>
-            </Link>
+            </OtherLink>
           </ul>
         </ModalSection>
       </ModalWrapper>

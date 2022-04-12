@@ -2,29 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const FooterWrapper = styled.footer`
-  height: 379px;
-  display: flex;
-  align-items: center;
-  background-color: #f4f5f7;
-  margin-bottom: 0;
-  justify-content: space-between;
-  padding: 0 24px;
-  margin: auto;
-  line-height: 30px;
-  font-family: SUIT-Regular;
-  @media screen and (max-width: 1150px) {
-    display: block;
-  }
-  @media screen and (max-width: 500px) {
-    display: block;
-  }
-`;
-const BoldP = styled.p`
-  font-family: SUIT-Bold;
-  margin: 0;
-`;
-
 const Wrapper = styled.footer`
   display: flex;
   justify-content: space-around;
@@ -119,15 +96,15 @@ const Footer = () => {
         <AskArea>
           <div>
             <h3>채용문의</h3>
-            <Link to="/">
+            <a href="mailto:hr@60hz.io">
               <span>hr@60hz.io</span>
-            </Link>
+            </a>
           </div>
           <div className="otherQnA">
             <h3>기타문의</h3>
-            <Link to="/">
+            <a href="mailto:hr@60hz.io">
               <span>hr@60hz.io</span>
-            </Link>
+            </a>
           </div>
         </AskArea>
         <div>
@@ -161,69 +138,6 @@ const Footer = () => {
         </div>
       </RightSection>
     </Wrapper>
-    // <footer
-    //   style={{
-    //     mimHeight: '379px',
-    //     backgroundColor: '#F4F5F7',
-    //     bottom: '0',
-    //     position: 'relative',
-    //   }}
-    // >
-    //   <div
-    //     style={{
-    //       maxWidth: '1190px',
-    //       margin: '0px auto',
-    //       padding: '0 24px',
-    //       height: '100%',
-    //     }}
-    //   >
-    //     <div
-    //       style={{
-    //         display: 'flex',
-    //         justifyContent: 'space-between',
-    //         textAlign: 'left',
-    //         lineHeight: '30px',
-    //         fontSize: '16px',
-    //         padding: '120px 0',
-    //         color: 'rgb(108, 108, 108)',
-    //       }}
-    //     >
-    //       <div
-    //         style={{
-    //           display: 'flex',
-    //           justifyContent: 'start',
-    //         }}
-    //       >
-    //         <div style={{ display: 'flex', justifyContent: 'start' }}>
-    //           <div style={{ marginRight: '70px' }}>
-    //             <BoldP>채용문의</BoldP>
-    //             <div>hr@60hz.io</div>
-    //           </div>
-    //           <div style={{ marginRight: '70px' }}>
-    //             <BoldP>기타문의</BoldP>
-    //             <div>hello@60hz.io</div>
-    //           </div>
-    //         </div>
-    //         <div>
-    //           <BoldP>식스티헤르츠</BoldP>
-    //           <div>ABOUT</div>
-    //           <div>BUSINESS</div>
-    //           <div>CAREER</div>
-    //         </div>
-    //       </div>
-    //       <div>
-    //         <div>
-    //           <span style={{ fontFamily: 'SUIT-Bold' }}>
-    //             식스티헤르츠 주식회사
-    //           </span>{' '}
-    //           | 대표 : 김종규{' '}
-    //         </div>
-    //         <div>사업자등록번호 : 878-88-01768</div>
-    //         <div>서울시 중구 명동길 73 6층 602호</div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </footer>
   );
 };
 

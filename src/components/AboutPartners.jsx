@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 650px;
   margin-top: 150px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   h5 {
     margin-top: 20px;
   }
@@ -41,9 +41,70 @@ const Row = styled.div`
   width: 1250px;
   height: 95px;
   display: flex;
+  // justify-content: space-between;
   align-items: center;
   img {
-    margin-right: 1.5rem;
+    margin-right: 25px;
+  }
+  @media screen and (max-width: 1280px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    width: 800px;
+    img {
+      height: 24px;
+      margin-right: 0;
+    }
+    div {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 770px) {
+    width: 90%;
+    img {
+      height: 18px;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    width: 95%;
+    img {
+      height: 12px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    width: 95%;
+    img {
+      height: 12px;
+    }
+  }
+`;
+
+const RowTitle = styled.div`
+  display: inline-block;
+  width: 200px;
+  font-family: SUIT-Bold;
+  font-size: 20px;
+  @media screen and (max-width: 1280px) {
+    bottom: 0;
+    text-align: center;
+  }
+  @media screen and (max-width: 770px) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 420px) {
+    font-size: 13px;
+    width: 140px;
+  }
+`;
+
+const Col = styled.div`
+  height: 95px;
+  display: flex;
+  justify-content: center;
+  img {
+    height: 25%;
   }
   @media screen and (max-width: 1280px) {
     display: grid;
@@ -54,7 +115,7 @@ const Row = styled.div`
       height: 20px;
     }
     div {
-      width: 33%;
+      width: 100%;
       display: flex;
       justify-content: center;
     }
@@ -79,29 +140,11 @@ const Row = styled.div`
   }
 `;
 
-const RowTitle = styled.span`
-  display: inline-block;
-  width: 200px;
-  font-family: SUIT-Bold;
-  font-size: 20px;
-  @media screen and (max-width: 1280px) {
-    bottom: 0;
-    text-align: center;
-  }
-  @media screen and (max-width: 770px) {
-    font-size: 15px;
-  }
-  @media screen and (max-width: 420px) {
-    font-size: 15px;
-    width: 140px;
-  }
-`;
-
 const AboutPartners = () => {
   return (
     <Wrapper id="partnersection">
       <div>
-        <h1 style={{ fontFamily: 'SUIT-SemiBold' }}>함께하는 기업들</h1>
+        <h1 className="title_font2">함께하는 기업들</h1>
         <h5>2021년 9월 28일 기준</h5>
         <ContentWrapper>
           <Row>

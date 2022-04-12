@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SeeMore } from '../page/home';
-
-import { Link } from 'react-router-dom';
+import SeeMore from '../static/style/seemore';
 
 const SectionWrapper = styled.section`
   display: flex;
@@ -50,12 +48,13 @@ const Together = () => {
   return (
     <SectionWrapper>
       <div>
-        <img src="/emoji.png" width="68px" height="68px" />
+        <img src="/emoji.png" width="68px" height="68px" alt="emoji" />
         <h1>함께해요!</h1>
         <h3>에너지 시장의 새로운 미래를 열어갈 당신을 기다립니다.</h3>
         <a
           href="https://blue-ocarina-b66.notion.site/994ec0493d0a4c9284529ee6fe932b79"
           target="_blank"
+          rel="noreferrer"
         >
           <SeeMore>채용 바로가기</SeeMore>
         </a>

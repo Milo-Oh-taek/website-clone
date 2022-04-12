@@ -1,11 +1,9 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-import { Container, Row, Col } from 'react-bootstrap';
+import styled from 'styled-components';
 import Together from '../components/Together';
 import AboutPartners from '../components/AboutPartners';
 import AboutAwards from '../components/AboutAwards';
 
-import { Link } from 'react-router-dom';
 import Members from '../components/Members';
 import Plan from '../components/Plan';
 
@@ -15,11 +13,6 @@ const Main = styled.main`
   font-family: SUIT-Regular;
   test-align: center;
   .main_title {
-    font-size: 52px;
-    font-family: SUIT-Bold;
-    line-height: 85px;
-    padding-bottom: 15px;
-    margin-bottom: 0;
     @media screen and (max-width: 1280px) {
       font-size: 37px;
     }
@@ -57,110 +50,6 @@ const Main = styled.main`
     padding-top: 150px;
     .about_br {
       display: block;
-    }
-  }
-`;
-
-export const bounce = keyframes`
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(15px);
-  }
-`;
-
-const LinkEffect = styled.a`
-  &:hover {
-    img {
-      animation: ${bounce};
-      animation-direction: alternate;
-      animation-duration: 1s;
-      animation-iteration-count: infinite;
-    }
-  }
-`;
-
-const PlanDiv = styled.div`
-  display: flex;
-  justify-content: center;
-  // text-align: left;
-  .number {
-    border-bottom: 1px solid #000;
-    font-family: SUIT-Regular;
-    font-size: 35px;
-    padding-bottom: 8px;
-  }
-  .text {
-    margin-top: 22px;
-  }
-  a {
-    text-decoration: none;
-    color: rgb(236, 91, 68);
-    font-size: 20px;
-  }
-  h6 {
-    font-size: 20px;
-    line-height: 20px;
-  }
-`;
-
-const PlanUl = styled.ul`
-  list-style: none;
-  padding: 130px 175px 130px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 40px 30px;
-  @media screen and (max-width: 1600px) {
-    gap: 60px 30px;
-    padding: 130px 100px 90px;
-    width: 1300px;
-  }
-  @media screen and (max-width: 1280px) {
-    gap: 45px 30px;
-    padding: 130px 100px 90px;
-    width: 1000px;
-  }
-  @media screen and (max-width: 935px) {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 100px 50px 90px;
-    width: 700px;
-  }
-  @media screen and (max-width: 680px) {
-    padding: 70px 20px 50px;
-    width: 550px;
-  }
-  @media screen and (max-width: 580px) {
-    gap: 20px 30px;
-    width: 400px;
-  }
-`;
-
-const PlanLi = styled.li`
-  .plan_title {
-    font-family: SUIT-SemiBold;
-    font-size: 45px;
-  }
-  .plan_subtitle {
-    font-size: 18px;
-    line-height: 30px;
-    font-family: SUIT-Medium;
-  }
-  @media screen and (max-width: 1600px) {
-    width: 350px;
-  }
-  @media screen and (max-width: 1280px) {
-    width: 260px;
-  }
-  @media screen and (max-width: 935px) {
-    grid-column: span 2;
-  }
-  @media screen and (max-width: 580px) {
-    .number {
-      font-size: 18px;
-    }
-    .plan_title {
-      font-size: 30px;
     }
   }
 `;
@@ -233,7 +122,7 @@ const About = () => {
     <>
       <section style={{ fontFamily: 'SUIT-Regular' }}>
         <Main>
-          <h1 className="main_title">
+          <h1 className="main_title title_font1">
             재생 에너지로
             <br className="about_br" /> 지구를 지키는 방법을
             <br className="about_br" /> 연구합니다.

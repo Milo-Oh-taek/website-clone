@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { SeeMore } from '../page/home';
-
-import { Accordion } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import SeeMore from '../static/style/seemore';
 
 const Wrapper = styled.div`
   margin: 300px auto;
@@ -49,9 +46,13 @@ const JobTitle = styled.div`
     }
   }
 `;
-const JobTitleH2 = styled.h3`
+const JobTitleDiv = styled.div`
   font-family: Spoqa-Han-Sans-Neo-Bold;
+  font-size: 28px;
   margin: 0;
+  @media screen and (max-width: 1280px) {
+    font-size: 25px;
+  }
   @media screen and (max-width: 500px) {
     font-size: 20px;
   }
@@ -101,10 +102,18 @@ const ApplyAreaDiv = styled.div`
   }
 `;
 
-const RecruitH1 = styled.h1`
+const RecruitDiv = styled.div`
   font-size: 40px;
   margin-bottom: 50px;
   font-family: Pretendard-SemiBold;
+  @media screen and (max-width: 1280px) {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 770px) {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
   @media screen and (max-width: 500px) {
     font-size: 25px;
     margin-bottom: 30px;
@@ -123,21 +132,23 @@ const Recruit = () => {
 
   return (
     <Wrapper>
-      <RecruitH1>인재영입</RecruitH1>
+      <RecruitDiv className="title_font2">인재영입</RecruitDiv>
       <div>
         <JobTitle>
-          <JobTitleH2>서비스 개발팀 - 백엔드</JobTitleH2>
+          <JobTitleDiv>서비스 개발팀 - 백엔드</JobTitleDiv>
           {openItem !== 'back' ? (
             <img
               src="/hire_down.png"
               onClick={() => openClose('back')}
               className="arrow"
+              alt="arrow_img"
             />
           ) : (
             <img
               src="/hire_up.png"
               onClick={() => openClose('back')}
               className="arrow"
+              alt="arrow_img"
             />
           )}
         </JobTitle>
@@ -187,11 +198,19 @@ const Recruit = () => {
           </ApplyAreaDiv>
         </article>
         <JobTitle>
-          <JobTitleH2>서비스 개발팀 - 프론트엔드</JobTitleH2>
+          <JobTitleDiv>서비스 개발팀 - 프론트엔드</JobTitleDiv>
           {openItem !== 'front' ? (
-            <img src="/hire_down.png" onClick={() => openClose('front')} />
+            <img
+              src="/hire_down.png"
+              onClick={() => openClose('front')}
+              alt="arrow_img"
+            />
           ) : (
-            <img src="/hire_up.png" onClick={() => openClose('front')} />
+            <img
+              src="/hire_up.png"
+              onClick={() => openClose('front')}
+              alt="arrow_img"
+            />
           )}
         </JobTitle>
         <article className={openItem === 'front' ? 'show' : 'hide'}>

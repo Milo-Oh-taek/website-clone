@@ -1,14 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Together from '../components/Together';
-export const bounce = keyframes`
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(15px);
-  }
-`;
+import bounce from '../static/style/bounce';
 
 const Section = styled.section`
   padding-top: 200px;
@@ -48,7 +41,10 @@ const MonitoringDiv = styled.div`
 
 const LinkEffect = styled.div`
   display: flex;
-  alignitems: center;
+  align-items: center;
+  img {
+    height: 20px;
+  }
   &:hover {
     img {
       animation: ${bounce};
@@ -57,13 +53,16 @@ const LinkEffect = styled.div`
       animation-iteration-count: infinite;
     }
   }
-  color: #1d336a;
+  color: #15346e;
   text-decoration: none;
   font-family: SUIT-Bold;
   font-size: 25px;
   margin-top: 30px;
   @media screen and (max-width: 900px) {
     font-size: 20px;
+    img {
+      height: 15px;
+    }
   }
   @media screen and (max-width: 650px) {
     font-size: 18px;
@@ -71,14 +70,14 @@ const LinkEffect = styled.div`
   @media screen and (max-width: 420px) {
     font-size: 15px;
     img {
-      height: 20px;
+      height: 12px;
     }
   }
   @media screen and (max-width: 375px) {
     margin-top: 15px;
     font-size: 13px;
     img {
-      height: 15px;
+      height: 10px;
     }
   }
 `;
@@ -162,6 +161,13 @@ const ArticleTitle = styled.div`
     font-family: SUIT-SemiBold;
     margin: 1rem 0;
   }
+  .monitoring_title_div .title_font2 {
+    line-height: 70px;
+  }
+  .sunmap.title_font2 {
+    line-height: 70px;
+    margin-bottom: 20px;
+  }
   @media screen and (max-width: 1550px) {
     img {
       margin-bottom: 0;
@@ -176,11 +182,32 @@ const ArticleTitle = styled.div`
       line-height: 30px;
     }
   }
-  @media screen and (max-width: 650px) {
-    h1 {
-      font-size: 25px;
+  @media screen and (max-width: 1280px) {
+    .monitoring_title_div .title_font2 {
+      line-height: 50px;
+    }
+    .sunmap.title_font2 {
       line-height: 40px;
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (max-width: 770px) {
+    .monitoring_title_div .title_font2 {
+      line-height: 40px;
+    }
+    .sunmap.title_font2 {
+      line-height: 40px;
+    }
+  }
+  @media screen and (max-width: 650px) {
+    .monitoring_title_div .title_font2 {
+      font-size: 25px;
+      line-height: 20px;
       margin-bottom: 12px;
+    }
+    .sunmap.title_font2 {
+      font-size: 25px;
+      line-height: 20px;
     }
   }
   @media screen and (max-width: 420px) {
@@ -198,16 +225,15 @@ const ArticleTitle = styled.div`
     img {
       height: 25px;
     }
-    h1 {
+    .title_font2 {
       font-size: 17px;
-      margin-top: 5px;
-      margin-bottom: 8px;
-      line-height: 22px;
+      margin: 0;
+      line-height: 0px;
     }
   }
 `;
 
-const SunmapH2 = styled.h2`
+const SunmapDiv = styled.div`
   font-size: 25px;
   font-family: SUIT-Medium;
   line-height: 45px;
@@ -286,12 +312,14 @@ const MonitoringImgArea = styled.div`
   width: 850px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: white;
   @media screen and (max-width: 900px) {
     padding: 25px 0;
     width: 600px;
   }
   @media screen and (max-width: 650px) {
-    width: 450px;
+    width: 500px;
   }
   @media screen and (max-width: 420px) {
     border-radius: 15px;
@@ -373,10 +401,10 @@ const Biz = () => {
           </YoutubeBox>
           <SunmapArticle>
             <ArticleTitle>
-              <img src="/biz/map.svg" />
-              <h1>햇빛바람지도</h1>
+              <img src="/biz/map.svg" alt="map_emoji" />
+              <div className="title_font2 sunmap">햇빛바람지도</div>
             </ArticleTitle>
-            <SunmapH2>
+            <SunmapDiv>
               약 8만여 개의 태양광, 풍력 발전소를 한눈에 확인해보세요.
               <br />
               AI기술로 미래 발전량을 예측하고, 기상 정보를
@@ -384,7 +412,7 @@ const Biz = () => {
               다양한 방식으로 시각화하였습니다.
               <br />
               공공데이터 활용 우수사례로 대통령상을 수상하였습니다.
-            </SunmapH2>
+            </SunmapDiv>
             <LinkArea>
               <a
                 href="https://map.60hz.io/index.html"
@@ -392,8 +420,8 @@ const Biz = () => {
                 rel="noreferrer"
               >
                 <LinkEffect>
-                  <span>햇빛바람지도 바로가기</span>
-                  <img src="/biz/arrow_forward.svg" />
+                  <span>햇빛바람지도 바로가기</span>&nbsp;
+                  <img src="/biz/arrow_forward_blue.svg" alt="arrow" />
                 </LinkEffect>
               </a>
             </LinkArea>
@@ -402,12 +430,15 @@ const Biz = () => {
         <MonitoringDiv id="product">
           <MonitorArticle>
             <ArticleTitle>
-              <img src="/biz/audio.svg" height="47px" />
-              <div>
-                <h1 style={{ fontFamily: 'SUIT-SemiBold' }}>재생에너지</h1>
-                <h1 style={{ fontFamily: 'Spoqa-Han-Sans-Neo-Bold' }}>
+              <img src="/biz/audio.svg" height="47px" alt="audio_emoji" />
+              <div className="monitoring_title_div">
+                <div className="title_font2">재생에너지</div>
+                <div
+                  className="title_font2"
+                  style={{ fontFamily: 'Spoqa-Han-Sans-Neo-Bold' }}
+                >
                   통합관제시스템
-                </h1>
+                </div>
               </div>
             </ArticleTitle>
 
@@ -434,8 +465,8 @@ const Biz = () => {
                 rel="noreferrer"
               >
                 <LinkEffect>
-                  <span>솔루션 문의하기</span>
-                  <img src="/biz/arrow_forward.svg" />
+                  <span>솔루션 문의하기</span>&nbsp;
+                  <img src="/biz/arrow_forward_blue.svg" alt="arrow" />
                 </LinkEffect>
               </a>
             </LinkArea>

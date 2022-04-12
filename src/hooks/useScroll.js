@@ -1,38 +1,35 @@
-import React, { useRef, useEffect, useCallback } from 'react';
+import { useRef, useEffect, useCallback } from 'react';
 
 const useScroll = () => {
   const dom = useRef();
 
   const handleCallback = useCallback(([entry]) => {
     const { current } = dom;
-    const test = current.classList;
+    const domTokenList = current.classList;
 
     if (entry.isIntersecting) {
-      console.log(test);
-      if (test.contains('one')) {
+      console.log(domTokenList);
+      if (domTokenList.contains('one')) {
         current.classList.add('inside_of_viewport1');
-        current.classList.remove('out_of_viewport');
-      } else if (test.contains('two')) {
+      } else if (domTokenList.contains('two')) {
         current.classList.add('inside_of_viewport2');
-        current.classList.remove('out_of_viewport');
-      } else if (test.contains('three')) {
+      } else if (domTokenList.contains('three')) {
         current.classList.add('inside_of_viewport3');
-        current.classList.remove('out_of_viewport');
-      } else if (test.contains('four')) {
+      } else if (domTokenList.contains('four')) {
         current.classList.add('inside_of_viewport4');
-        current.classList.remove('out_of_viewport');
       }
+      current.classList.remove('out_of_viewport');
     } else {
-      if (test.contains('one')) {
+      if (domTokenList.contains('one')) {
         current?.classList.add('out_of_viewport');
         current?.classList.remove('inside_of_viewport1');
-      } else if (test.contains('two')) {
+      } else if (domTokenList.contains('two')) {
         current?.classList.add('out_of_viewport');
         current?.classList.remove('inside_of_viewport2');
-      } else if (test.contains('three')) {
+      } else if (domTokenList.contains('three')) {
         current?.classList.add('out_of_viewport');
         current?.classList.remove('inside_of_viewport3');
-      } else if (test.contains('four')) {
+      } else if (domTokenList.contains('four')) {
         current?.classList.add('out_of_viewport');
         current?.classList.remove('inside_of_viewport4');
       }

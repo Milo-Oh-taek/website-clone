@@ -4,7 +4,6 @@ import About from './page/about';
 import Biz from './page/biz';
 import Career from './page/career';
 import Layout from './components/Layout';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import ScrollTotop from './components/ScrollTotop';
 
 function App() {

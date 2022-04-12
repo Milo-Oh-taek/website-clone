@@ -2,15 +2,14 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const ScrollTotop = () => {
-  const test = useLocation();
+  const { hash, pathname } = useLocation();
 
   useEffect(() => {
-    // console.log(test);
-    if (test.hash) {
+    if (hash) {
       return;
     }
     window.scrollTo(0, 0);
-  }, [test.pathname]);
+  }, [pathname]);
 
   return null;
 };

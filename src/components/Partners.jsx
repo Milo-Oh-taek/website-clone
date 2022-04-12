@@ -1,16 +1,8 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import bounce from '../static/style/bounce';
 
-import { Container, Row, Col } from 'react-bootstrap';
-export const bounce = keyframes`
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(15px);
-  }
-`;
 const Wrapper = styled.section`
   width: 100%;
   max-width: 100%;
@@ -60,9 +52,9 @@ const ContentUl = styled.ul`
     gap: 30px 3px;
   }
   @media screen and (max-width: 550px) {
-    width: 95vw;
+    width: 90vw;
     grid-gap: 0px;
-    gap: 10px;
+    gap: 1px;
     margin-top: 60px;
     margin-bottom: 0;
     // grid-template-columns: repeat(2, 1fr);
@@ -84,17 +76,16 @@ const ContentLi = styled.li`
     @media screen and (max-width: 550px) {
       height: 100%;
       width: 100%;
+      margin-bottom: 15px;
     }
   }
 `;
 
 const TitleH1 = styled.h1`
-  font-size: 40px;
-  font-family: SUIT-SemiBold;
   margin-bottom: 22px;
-  @media screen and (max-width: 770px) {
-    font-size: 35px;
-  }
+  // @media screen and (max-width: 770px) {
+  //   font-size: 35px;
+  // }
   @media screen and (max-width: 500px) {
     font-size: 30px;
     margin-bottom: 10px;
@@ -103,7 +94,9 @@ const TitleH1 = styled.h1`
 
 const MoreLinkArea = styled.div`
   margin-top: 60px;
-
+  display: flex;
+  justify-content: center;
+  width: 100%;
   &:hover {
     img {
       animation: ${bounce};
@@ -124,10 +117,23 @@ const MoreLink = styled.div`
   border-bottom: 2px solid;
   padding-bottom: 5px;
   text-decoration: none;
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 28px;
+  }
+  @media screen and (max-width: 770px) {
+    font-size: 22px;
+    img {
+      height: 22px;
+    }
+  }
   @media screen and (max-width: 500px) {
-    font-size: 20px;
+    font-size: 16px;
+    img {
+      height: 16px;
+    }
   }
 `;
 
@@ -137,38 +143,37 @@ const Partners = () => {
       <BorderLine>
         <div></div>
       </BorderLine>
-      {/* <div style={{ maxWidth: '100%' }}> */}
       <div>
-        <TitleH1>함께하는 기업들</TitleH1>
+        <TitleH1 className="title_font2">함께하는 기업들</TitleH1>
         <div>2021년 9월 28일 기준</div>
         <ContentContainer>
           <ContentUl>
             <ContentLi>
-              <img src="/home/logo/skt.png" />
+              <img src="/home/logo/skt.png" alt="ESG_Logo" />
             </ContentLi>
             <ContentLi>
-              <img src="/home/logo/LG2.png" />
+              <img src="/home/logo/LG2.png" alt="LG_Logo" />
             </ContentLi>
             <ContentLi>
-              <img src="/home/logo/ondream.png" />
+              <img src="/home/logo/ondream.png" alt="H온드림_Logo" />
             </ContentLi>
             <ContentLi>
-              <img src="/home/logo/shinhan.png" />
+              <img src="/home/logo/shinhan.png" alt="신한_Logo" />
             </ContentLi>
             <ContentLi>
-              <img src="/home/logo/kwater.png" />
+              <img src="/home/logo/kwater.png" alt="Kwater_Logo" />
             </ContentLi>
             <ContentLi>
-              <img src="/home/logo/sopoong.png" />
+              <img src="/home/logo/sopoong.png" alt="소풍_Logo" />
             </ContentLi>
             <ContentLi>
-              <img src="/home/logo/mysc.png" />
+              <img src="/home/logo/mysc.png" alt="mysc_Logo" />
             </ContentLi>
             <ContentLi>
-              <img src="/home/logo/zeroone.png" />
+              <img src="/home/logo/zeroone.png" alt="제로원_Logo" />
             </ContentLi>
             <ContentLi>
-              <img src="/home/logo/BNZ.png" />
+              <img src="/home/logo/BNZ.png" alt="BNZ_Logo" />
             </ContentLi>
           </ContentUl>
         </ContentContainer>
@@ -182,7 +187,6 @@ const Partners = () => {
           </Link>
         </MoreLinkArea>
       </div>
-      {/* </div> */}
     </Wrapper>
   );
 };
