@@ -13,18 +13,31 @@ const SectionWrapper = styled.section`
     hsla(57, 97%, 88%, 0.484) 93.35%,
     rgba(198, 245, 255, 0.48) 113.27%
   );
-  h1 {
+  .title {
+    font-size: 40px;
     font-family: SUIT-Bold;
-    font-size: 35px;
-    line-height: 70px;
   }
-  h3 {
-    font-family: SUIT-Regular;
-    font-size: 20px;
-    margin-bottom: 25px;
+  .subtitle {
+    font-size: 24px;
+    font-family: SUIT-Medium;
+    margin-bottom: 20px;
   }
+
   a {
     text-decoration: none;
+  }
+  @media screen and (max-width: 1280px) {
+    img {
+      height: 50px;
+      width: 50px;
+    }
+    .title {
+      font-size: 30px;
+    }
+    .subtitle {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
   }
   @media screen and (max-width: 770px) {
     img {
@@ -32,12 +45,44 @@ const SectionWrapper = styled.section`
       width: 45px;
     }
     height: 300px;
-    h1 {
-      margin-top: 10px;
+    .title {
       font-size: 25px;
+      margin-bottom: 4px;
       line-height: 30px;
     }
-    h3 {
+    .subtitle {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    img {
+      height: 40px;
+      width: 40px;
+    }
+    height: 300px;
+    .title {
+      font-size: 25px;
+      margin-bottom: 4px;
+      line-height: 30px;
+    }
+    .subtitle {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (max-width: 420px) {
+    img {
+      height: 35px;
+      width: 35px;
+    }
+    height: 300px;
+    .title {
+      font-size: 25px;
+      margin-bottom: 4px;
+      line-height: 30px;
+    }
+    .subtitle {
       font-size: 15px;
       margin-bottom: 20px;
     }
@@ -48,9 +93,11 @@ const Together = () => {
   return (
     <SectionWrapper>
       <div>
-        <img src="/emoji.png" width="68px" height="68px" alt="emoji" />
-        <h1>함께해요!</h1>
-        <h3>에너지 시장의 새로운 미래를 열어갈 당신을 기다립니다.</h3>
+        <img src="/emoji.png" width="60px" height="60px" alt="emoji" />
+        <div className="title">함께해요!</div>
+        <div className="subtitle">
+          에너지 시장의 새로운 미래를 열어갈 당신을 기다립니다.
+        </div>
         <a
           href="https://blue-ocarina-b66.notion.site/994ec0493d0a4c9284529ee6fe932b79"
           target="_blank"

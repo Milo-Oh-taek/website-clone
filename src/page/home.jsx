@@ -93,12 +93,13 @@ const IframeDiv = styled.div`
 `;
 
 const Iframe = styled.iframe`
+  border: 0;
   position: absolute;
   left: 0px;
   top: 0px;
   width: 100%;
   height: 100%;
-  maxwidth: 100%;
+  max-width: 100%;
   border-radius: 15px;
 `;
 

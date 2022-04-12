@@ -8,7 +8,7 @@ const SeeMore = styled.div`
   height: 90px;
   display: table-cell;
   vertical-align: middle;
-  font-size: 20px;
+  font-size: 22px;
   width: 180px;
   height: 75px;
   margin-top: 40px;
@@ -17,7 +17,12 @@ const SeeMore = styled.div`
     color: white;
   }
   @media screen and (max-width: 770px) {
-    font-size: 15px;
+    font-size: 18px;
+    height: 50px;
+    width: 130px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 17px;
     height: 50px;
     width: 130px;
   }

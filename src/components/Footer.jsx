@@ -42,6 +42,10 @@ const LeftSection = styled.section`
   display: flex;
   gap: 100px;
   line-height: 30px;
+  h3 {
+    margin: 0;
+  }
+
   @media screen and (max-width: 1150px) {
     justify-content: center;
   }

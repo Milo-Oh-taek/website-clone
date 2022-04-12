@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   margin: 300px auto;
   max-width: 1300px;
   text-align: left;
+
   .hide {
     display: none;
   }
@@ -15,13 +16,13 @@ const Wrapper = styled.div`
   @media screen and (max-width: 1300px) {
     width: 95vw;
   }
-  @media screen and (max-width: 960px) {
-    margin: 200px auto;
-    width: 95vw;
+  @media screen and (max-width: 980px) {
+    padding-left: 10%;
+    margin: 200px auto 200px 0;
+    width: 80%;
   }
   @media screen and (max-width: 500px) {
-    margin: 100px auto;
-    width: 90vw;
+    margin: 100px auto 100px 0;
   }
 `;
 

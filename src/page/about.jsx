@@ -27,7 +27,7 @@ const Main = styled.main`
     }
   }
   .main_subTitle {
-    font-size: 30px;
+    font-size: 25px;
     line-height: 50px;
     font-family: SUIT-Medium;
     @media screen and (max-width: 1280px) {
@@ -89,7 +89,7 @@ const MainImgDiv = styled.div`
 `;
 
 const MainSubTitleSpan = styled.span`
-  font-size: 30px;
+  font-size: 25px;
   line-height: 50px;
   font-family: SUIT-Medium;
   .subTitle_mo_br {

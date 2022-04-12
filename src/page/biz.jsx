@@ -34,9 +34,13 @@ const MonitoringDiv = styled.div`
     flex-direction: column-reverse;
     padding: 100px 0;
   }
-  @media screen and (max-width: 500px) {
-    padding: 50px 0;
-  }
+  // @media screen and (max-width: 500px) {
+  //   padding: 50px 0;
+  // }
+  // @media screen and (max-width: 375px) {
+  //   width: 300px;
+  //   height: 165px;
+  // }
 `;
 
 const LinkEffect = styled.div`
@@ -99,39 +103,58 @@ const SunmapBox = styled.div`
 const YoutubeBox = styled.aside`
   border-radius: 25px;
   box-shadow: 10px 10px 20px rgb(0 0 0 / 20%);
-  height: 500px;
+  width: 800px;
+  height: 450px;
   overflow: hidden;
   padding: 25px;
-  width: 850px;
+  // width: 85%;
+  // max-width: 50%;
+  // display: inline-block;
+  // border: 40px solid rgb(255, 255, 255);
+
   @media screen and (max-width: 900px) {
-    height: 360px;
-    width: 600px;
+    width: 550px;
+    height: 310px;
   }
   @media screen and (max-width: 650px) {
-    height: 275px;
-    width: 450px;
+    // max-width: 90%;
+    // border: 30px;
+    // padding: 20px;
+    width: 400px;
+    height: 225px;
   }
   @media screen and (max-width: 420px) {
-    height: 220px;
-    width: 370px;
+    // max-width: 95%;
+    width: 340px;
+    height: 190px;
     border-radius: 15px;
     box-shadow: 10px 13px 20px rgb(0 0 0 / 15%);
     padding: 15px;
   }
   @media screen and (max-width: 375px) {
-    height: 195px;
-    width: 330px;
+    height: 165px;
+    width: 300px;
+  }
+  .embed-container iframe,
+  .embed-container object,
+  .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 `;
 
 const Iframe = styled.iframe`
-  position: relative;
+  position: aboslute;
   left: 0px;
   top: 0px;
   width: 100%;
   height: 100%;
   max-width: 100%;
   border-radius: 15px;
+  border: 0;
   @media screen and (max-width: 420px) {
     border-radius: 10px;
   }
@@ -143,7 +166,7 @@ const SunmapArticle = styled.article`
   margin-left: 80px;
   text-align: left;
   @media screen and (max-width: 1550px) {
-    margin: 30px 120px 0 0;
+    margin: 30px 0 0 0;
   }
   @media screen and (max-width: 900px) {
     margin-right: 0;
@@ -173,15 +196,6 @@ const ArticleTitle = styled.div`
       margin-bottom: 0;
     }
   }
-  @media screen and (max-width: 900px) {
-    img {
-      height: 40px;
-    }
-    h1 {
-      font-size: 30px;
-      line-height: 30px;
-    }
-  }
   @media screen and (max-width: 1280px) {
     .monitoring_title_div .title_font2 {
       line-height: 50px;
@@ -191,6 +205,16 @@ const ArticleTitle = styled.div`
       margin-bottom: 20px;
     }
   }
+  @media screen and (max-width: 900px) {
+    img {
+      height: 40px;
+    }
+    h1 {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+
   @media screen and (max-width: 770px) {
     .monitoring_title_div .title_font2 {
       line-height: 40px;
@@ -200,9 +224,12 @@ const ArticleTitle = styled.div`
     }
   }
   @media screen and (max-width: 650px) {
+    img {
+      margin-bottom: 4px;
+    }
     .monitoring_title_div .title_font2 {
       font-size: 25px;
-      line-height: 20px;
+      line-height: 25px;
       margin-bottom: 12px;
     }
     .sunmap.title_font2 {
@@ -275,7 +302,7 @@ const MonitorArticle = styled.article`
   margin-right: 80px;
   text-align: left;
   @media screen and (max-width: 1550px) {
-    margin: 50px 120px 0 0;
+    margin: 50px 0 0 0;
   }
   @media screen and (max-width: 900px) {
     margin-right: 0px;
@@ -315,22 +342,22 @@ const MonitoringImgArea = styled.div`
   align-items: center;
   background-color: white;
   @media screen and (max-width: 900px) {
-    padding: 25px 0;
+    // padding: 25px 0;
     width: 600px;
   }
   @media screen and (max-width: 650px) {
-    width: 500px;
+    width: 450px;
   }
   @media screen and (max-width: 420px) {
     border-radius: 15px;
     box-shadow: 10px 13px 20px rgb(0 0 0 / 15%);
-    height: 230px;
+    height: 200px;
     padding: 15px;
-    width: 380px;
+    width: 350px;
   }
   @media screen and (max-width: 375px) {
-    height: 195px;
-    width: 330px;
+    height: 165px;
+    width: 300px;
   }
 `;
 
@@ -376,28 +403,29 @@ const MonitoringImgWrapper = styled.div`
   }
 `;
 
+const MonitoringAside = styled.aside``;
+
+const EmbedContainer = styled.div`
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  max-width: 100%;
+`;
+
 const Biz = () => {
   return (
     <>
       <Section>
         <SunmapBox>
           <YoutubeBox>
-            <div
-              style={{
-                overflow: 'hidden',
-                // paddingBottom: '56.25%',
-                position: 'relative',
-                margin: '0',
-                padding: '0',
-                height: '100%',
-              }}
-            >
+            <EmbedContainer className="embed-container">
               <Iframe
                 allowFullScreen
                 title="햇빛바람지도_미리보기"
                 src="https://www.youtube.com/embed/yGeiyZLHnlI?autoplay=1&mute=1&playlist=yGeiyZLHnlI&loop=1&modestbranding=1&controls=0"
-              ></Iframe>
-            </div>
+              />
+            </EmbedContainer>
           </YoutubeBox>
           <SunmapArticle>
             <ArticleTitle>
@@ -471,13 +499,13 @@ const Biz = () => {
               </a>
             </LinkArea>
           </MonitorArticle>
-          <aside>
+          <MonitoringAside>
             <MonitoringImgArea>
               <MonitoringImgWrapper>
                 <div className="slide_image"></div>
               </MonitoringImgWrapper>
             </MonitoringImgArea>
-          </aside>
+          </MonitoringAside>
         </MonitoringDiv>
       </Section>
       <Together />

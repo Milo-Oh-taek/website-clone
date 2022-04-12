@@ -6,11 +6,19 @@ const Wrapper = styled.div`
   height: 650px;
   margin-top: 150px;
   margin-bottom: 100px;
-  h5 {
+  .title.title_font2 {
+    margin-bottom: 22px;
+  }
+  .subtitle {
+    color: #848484;
+    font-size: 22px;
     margin-top: 20px;
   }
   @media screen and (max-width: 1280px) {
     margin-bottom: 100px;
+    .subtitle {
+      font-size: 20px;
+    }
   }
   @media screen and (max-width: 1080px) {
     margin-top: 250px;
@@ -18,13 +26,25 @@ const Wrapper = styled.div`
   @media screen and (max-width: 770px) {
     margin-top: 350px;
     margin-bottom: 0px;
+    .title.title_font2 {
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      font-size: 18px;
+    }
   }
   @media screen and (max-width: 500px) {
-    height: 600px;
+    height: 720px;
     h5 {
       font-size: 18px;
       margin-top: 15px;
     }
+    .subtitle {
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 370px) {
+    height: 600px;
   }
 `;
 
@@ -44,15 +64,18 @@ const Row = styled.div`
   // justify-content: space-between;
   align-items: center;
   img {
-    margin-right: 25px;
+    // margin-right: 25px;
+    // width: 100%;
+    height: 90px;
   }
   @media screen and (max-width: 1280px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
     width: 800px;
+    height: 120px;
     img {
-      height: 24px;
+      height: 60px;
       margin-right: 0;
     }
     div {
@@ -64,20 +87,27 @@ const Row = styled.div`
   @media screen and (max-width: 770px) {
     width: 90%;
     img {
-      height: 18px;
+      height: 50px;
     }
   }
-  @media screen and (max-width: 550px) {
-    width: 95%;
-    img {
-      height: 12px;
-    }
-  }
+  // @media screen and (max-width: 550px) {
+  //   width: 95%;
+  //   img {
+  //     height: 55px;
+  //   }
+  // }
   @media screen and (max-width: 500px) {
-    width: 95%;
+    width: 100%;
     img {
-      height: 12px;
+      height: 45px;
     }
+  }
+  @media screen and (max-width: 370px) {
+    width: 100%;
+    img {
+      height: 40px;
+    }
+    height: 80px;
   }
 `;
 
@@ -112,7 +142,7 @@ const Col = styled.div`
     place-items: center;
     width: 740px;
     img {
-      height: 20px;
+      height: 18px;
     }
     div {
       width: 100%;
@@ -144,64 +174,61 @@ const AboutPartners = () => {
   return (
     <Wrapper id="partnersection">
       <div>
-        <h1 className="title_font2">함께하는 기업들</h1>
-        <h5>2021년 9월 28일 기준</h5>
+        <h1 className="title title_font2">함께하는 기업들</h1>
+        <div className="subtitle">2021년 9월 28일 기준</div>
         <ContentWrapper>
           <Row>
             <RowTitle>엑셀러레이팅</RowTitle>
             <div>
-              <img src="/about/logo/skt.png"></img>
+              <img src="/about/logo/sk_box.png"></img>
             </div>
             <div>
-              <img src="/about/logo/lg.png"></img>
+              <img src="/about/logo/lg_box.png"></img>
             </div>
             <div>
-              <img src="/about/logo/ondream.png"></img>
+              <img src="/about/logo/온드림_box.png"></img>
             </div>
             <div>
-              <img src="/about/logo/shinhan.png"></img>
+              <img src="/about/logo/신한_box.png"></img>
             </div>
             <div>
-              <img src="/about/logo/kwater.png"></img>
+              <img src="/about/logo/kwater_box.png"></img>
             </div>
           </Row>
           <Row>
             <RowTitle>투자사</RowTitle>
             <div>
-              <img src="/about/logo/소풍.png"></img>
+              <img src="/about/logo/소풍_box.png"></img>
             </div>
             <div>
-              <img src="/about/logo/mysc.png"></img>
+              <img src="/about/logo/mysc_box.png"></img>
             </div>
             <div>
-              <img src="/about/logo/zeroone.png"></img>
+              <img src="/about/logo/제로원_box.png"></img>
             </div>
           </Row>
           <Row>
             <RowTitle>파트너</RowTitle>
             <div>
-              <img src="/about/logo/BNZ.png"></img>
+              <img src="/about/logo/굿네이버스_box.png"></img>
             </div>
             <div>
-              <img src="/about/logo/굿네이버스.png"></img>
+              <img src="/about/logo/그리드위즈_box.png"></img>
             </div>
             <div>
-              <img src="/about/logo/GW.png"></img>
-            </div>
-            <div>
-              <img src="/about/logo/인업스.png"></img>
+              <img src="/about/logo/인업스_box.png"></img>
             </div>
           </Row>
           <Row style={{ borderBottom: 'none' }}>
             <RowTitle>소셜 임팩트</RowTitle>
             <div>
-              <img src="/about/logo/impact.png"></img>
+              <img src="/about/logo/임팩트_box.png"></img>
             </div>
             <div>
-              <img src="/about/logo/소셜혁신연구소.png"></img>
+              <img src="/about/logo/소셜혁신연구소_box.png"></img>
             </div>
             <div>
-              <img src="/about/logo/유쾌한반란.png"></img>
+              <img src="/about/logo/유쾌한반란_box.png"></img>
             </div>
           </Row>
         </ContentWrapper>

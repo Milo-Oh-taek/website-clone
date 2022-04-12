@@ -8,13 +8,13 @@ const Wrapper = styled.section`
   max-width: 100%;
   margin-top: 0px;
   height: auto;
-  padding: 2rem 0 200px 0;
+  padding: 2rem 0 140px 0;
   @media screen and (max-width: 770px) {
     padding-bottom: 120px;
     padding-top: 1rem;
   }
-  @media screen and (max-width: 420px) {
-    padding-bottom: 120px;
+  @media screen and (max-width: 500px) {
+    padding-bottom: 90px;
     padding-top: 0px;
   }
 `;
@@ -26,6 +26,7 @@ const PressnameArea = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  color: #444444;
   @media screen and (max-width: 420px) {
     font-size: 10px;
     img {
@@ -39,6 +40,10 @@ const ArticleWrapper = styled.article`
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-bottom: 60px;
+  @media screen and (max-width: 770px) {
+    margin-bottom: 30px;
+  }
 `;
 const ArticleUl = styled.ul`
   display: grid;
@@ -50,7 +55,7 @@ const ArticleUl = styled.ul`
   padding: 0;
   @media screen and (max-width: 770px) {
     display: -webkit-inline-box;
-    height: 170px;
+    height: 150px;
     overflow-x: auto;
     overflow-y: hidden;
     width: 90%;
@@ -125,17 +130,21 @@ const PressContentP = styled.p`
 `;
 
 const TitleH4 = styled.h4`
-  margin: 150px 0;
-  // padding: 180px 0 70px;
+  margin: 120px 0 70px;
+  // padding: 180px 0 60px;
   @media screen and (max-width: 770px) {
     font-size: 35px;
-    margin: 120px 0;
+    margin: 100px 0 50px;
   }
   @media screen and (max-width: 500px) {
     margin: 0;
-    padding: 90px 0 50px;
+    padding: 90px 0 40px;
     font-size: 25px;
   }
+`;
+
+const SeemoreArea = styled.div`
+  margintop: 60px;
 `;
 
 const Press = () => {
@@ -151,8 +160,12 @@ const Press = () => {
               rel="noreferrer"
             >
               <PressnameArea>
-                조선일보 더나은미래
-                <img height="17px" src="/home/arrow_forward.svg" alt="icon" />
+                조선일보 더나은미래 &nbsp;
+                <img
+                  height="12px"
+                  src="/home/forward_arrow_press.svg"
+                  alt="icon"
+                />
               </PressnameArea>
               <PressContentP>
                 "재생에너지 효율 높이는
@@ -168,8 +181,12 @@ const Press = () => {
               rel="noreferrer"
             >
               <PressnameArea>
-                중앙일보
-                <img height="17px" src="/home/arrow_forward.svg" alt="icon" />
+                중앙일보&nbsp;
+                <img
+                  height="12px"
+                  src="/home/forward_arrow_press.svg"
+                  alt="icon"
+                />
               </PressnameArea>
 
               <PressContentP>
@@ -188,8 +205,12 @@ const Press = () => {
               rel="noreferrer"
             >
               <PressnameArea>
-                연합뉴스
-                <img height="17px" src="/home/arrow_forward.svg" alt="icon" />
+                연합뉴스&nbsp;
+                <img
+                  height="12px"
+                  src="/home/forward_arrow_press.svg"
+                  alt="icon"
+                />
               </PressnameArea>
 
               <PressContentP>
@@ -206,8 +227,12 @@ const Press = () => {
               rel="noreferrer"
             >
               <PressnameArea>
-                머니투데이
-                <img height="17px" src="/home/arrow_forward.svg" alt="icon" />
+                머니투데이&nbsp;
+                <img
+                  height="12px"
+                  src="/home/forward_arrow_press.svg"
+                  alt="icon"
+                />
               </PressnameArea>
 
               <PressContentP>
@@ -224,8 +249,12 @@ const Press = () => {
               rel="noreferrer"
             >
               <PressnameArea>
-                전기신문
-                <img height="17px" src="/home/arrow_forward.svg" alt="icon" />
+                전기신문&nbsp;
+                <img
+                  height="12px"
+                  src="/home/forward_arrow_press.svg"
+                  alt="icon"
+                />
               </PressnameArea>
 
               <PressContentP>
@@ -242,8 +271,12 @@ const Press = () => {
               rel="noreferrer"
             >
               <PressnameArea>
-                이투뉴스
-                <img height="17px" src="/home/arrow_forward.svg" alt="icon" />
+                이투뉴스&nbsp;
+                <img
+                  height="12px"
+                  src="/home/forward_arrow_press.svg"
+                  alt="icon"
+                />
               </PressnameArea>
 
               <PressContentP>
@@ -258,11 +291,7 @@ const Press = () => {
         </ArticleUl>
       </ArticleWrapper>
 
-      <div
-        style={{
-          marginTop: '60px',
-        }}
-      >
+      <SeemoreArea>
         <a
           target="_blank"
           href="https://blue-ocarina-b66.notion.site/7521f6afa92c418080a84bfd148b74ea"
@@ -270,7 +299,7 @@ const Press = () => {
         >
           <SeeMore>더보기</SeeMore>
         </a>
-      </div>
+      </SeemoreArea>
     </Wrapper>
   );
 };

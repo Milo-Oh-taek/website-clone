@@ -15,6 +15,9 @@ const Wrapper = styled.section`
   .col {
     padding: 1.5rem 0;
   }
+  @media screen and (max-width: 500px) {
+    padding-bottom: 90px;
+  }
 `;
 
 const BorderLine = styled.div`
@@ -24,9 +27,12 @@ const BorderLine = styled.div`
     border-top: 0.5px solid rgb(37, 37, 37);
     width: 85%;
     height: 0px;
-    padding-bottom: 200px;
-    @media screen and (max-width: 420px) {
+    padding-bottom: 140px;
+    @media screen and (max-width: 770px) {
       padding-bottom: 120px;
+    }
+    @media screen and (max-width: 500px) {
+      padding-bottom: 90px;
     }
   }
 `;
@@ -46,6 +52,7 @@ const ContentUl = styled.ul`
   mix-blend-mode: multiply;
   padding-left: 0;
   @media screen and (max-width: 1280px) {
+    margin-top: 70px;
     gap: 30px;
   }
   @media screen and (max-width: 770px) {
@@ -55,7 +62,7 @@ const ContentUl = styled.ul`
     width: 90vw;
     grid-gap: 0px;
     gap: 1px;
-    margin-top: 60px;
+    margin-top: 50px;
     margin-bottom: 0;
     // grid-template-columns: repeat(2, 1fr);
   }
@@ -83,12 +90,29 @@ const ContentLi = styled.li`
 
 const TitleH1 = styled.h1`
   margin-bottom: 22px;
-  // @media screen and (max-width: 770px) {
-  //   font-size: 35px;
-  // }
-  @media screen and (max-width: 500px) {
-    font-size: 30px;
+  @media screen and (max-width: 1280px) {
+    margin-bottom: 0px;
+  }
+  @media screen and (max-width: 770px) {
+    font-size: 35px;
     margin-bottom: 10px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 25px;
+    margin-bottom: 0px;
+  }
+`;
+const Subtitle = styled.div`
+  font-size: 22px;
+  color: #848484;
+  @media screen and (max-width: 1280px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 770px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 14px;
   }
 `;
 
@@ -105,8 +129,11 @@ const MoreLinkArea = styled.div`
       animation-iteration-count: infinite;
     }
   }
+  @media screen and (max-width: 770px) {
+    margin-top: 40px;
+  }
   @media screen and (max-width: 550px) {
-    margin-top: 60px;
+    margin-top: 30px;
   }
 `;
 
@@ -121,18 +148,18 @@ const MoreLink = styled.div`
   justify-content: center;
   align-items: center;
   img {
-    height: 28px;
+    height: 24px;
   }
   @media screen and (max-width: 770px) {
     font-size: 22px;
     img {
-      height: 22px;
+      height: 20px;
     }
   }
   @media screen and (max-width: 500px) {
     font-size: 16px;
     img {
-      height: 16px;
+      height: 14px;
     }
   }
 `;
@@ -144,8 +171,10 @@ const Partners = () => {
         <div></div>
       </BorderLine>
       <div>
-        <TitleH1 className="title_font2">함께하는 기업들</TitleH1>
-        <div>2021년 9월 28일 기준</div>
+        <TitleH1 className="title_font2" style={{ marginTop: '0' }}>
+          함께하는 기업들
+        </TitleH1>
+        <Subtitle>2021년 9월 28일 기준</Subtitle>
         <ContentContainer>
           <ContentUl>
             <ContentLi>
@@ -181,8 +210,8 @@ const Partners = () => {
         <MoreLinkArea>
           <Link to="about#partnersection">
             <MoreLink>
-              더 많은 파트너 보기
-              <img src="/home/arrow_forward.svg" alt="icon" />
+              더 많은 파트너 보기 &nbsp;
+              <img src="/home/forward_arrow_more.svg" alt="icon" />
             </MoreLink>
           </Link>
         </MoreLinkArea>
